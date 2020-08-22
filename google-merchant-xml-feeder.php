@@ -53,7 +53,8 @@ function callback_xml_feeder(){
 				<?php 
 					$arr = explode('|', get_option('merchant_product_asu'));
 					$count = count($arr) - 1;
-					echo $count.' adet gönderilmeyen ürün var';
+					echo $count.' adet gönderilmeyen ürün var<br>';
+					echo 'Merchant linkiniz: '.get_site_url().'/google-merchant.xml/';
 				?>
 			</span>
             <hr>
