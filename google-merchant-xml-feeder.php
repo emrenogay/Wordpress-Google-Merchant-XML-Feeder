@@ -6,7 +6,6 @@
  * Author: Emre Nogay
  * Author URI: https://emrenogay.com/
  * Version: 1.0
- * Text Domain: google-merchant-xml-feeder
  */
 
 if( !defined('ABSPATH') ) exit;
