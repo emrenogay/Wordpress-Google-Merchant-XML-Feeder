@@ -5,7 +5,7 @@
  * Description: WooCommerce altyapısını kullanan sitelerin, Google Merchant'a ürün gönderebilmesi için XML dosyası üreten basit bir eklenti.
  * Author: Emre Nogay
  * Author URI: https://emrenogay.com/
- * Version: 1.0
+ * Version: 1.3
  */
 
 if( !defined('ABSPATH') ) exit;
@@ -95,7 +95,7 @@ if (strstr($_SERVER['REQUEST_URI'], '/google-merchant.xml')) {
     add_filter('template_include', 'include_temp');
     function include_temp()
     {
-        return ABSPATH . 'wp-content/plugins/google-merchant-xml-feeder/merchant.php';
+        return plugin_dir_path( __FILE__ ) . '/merchant.php';
     }
 } 
 
@@ -103,7 +103,7 @@ if (strstr($_SERVER['REQUEST_URI'], '/google-merchant-request')) {
     add_filter('template_include', 'include_request');
     function include_request()
     {
-        return ABSPATH . 'wp-content/plugins/google-merchant-xml-feeder/request.php';
+        return plugin_dir_path( __FILE__ ) . '/request.php';
     }
 } 
 
