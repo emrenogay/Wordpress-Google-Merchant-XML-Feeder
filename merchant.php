@@ -24,7 +24,7 @@ $loop = new WP_Query($args);
         while ($loop->have_posts()) : $loop->the_post();
         global $product;
         $arr = explode('|', get_option('merchant_product_asu'));
-        if (!in_array(get_the_ID(), $arr)) {
+        if (!in_array(get_the_ID(), $arr) && $product->get_stock_quantity() > 0) {
             ?>
             <item>
                 <g:kimlik><?php echo get_the_ID(); ?></g:kimlik>
