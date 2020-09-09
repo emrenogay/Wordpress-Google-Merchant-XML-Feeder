@@ -61,7 +61,7 @@ function callback_xml_feeder(){
                  <div>
                    <?php
 						foreach($arr as $id):
-							if(!empty($id)){
+							if(!empty($id) && function_exists('wc_get_product')){
 								$product = wc_get_product($id);
 								echo '<a target="_blank" href="'.$product->get_permalink().'">'.$product->get_name().'</a><br>';
 							}
