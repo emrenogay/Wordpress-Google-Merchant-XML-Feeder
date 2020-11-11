@@ -16,7 +16,7 @@ $loop = new WP_Query($args);
 <rss version="2.0"
      xmlns:g="http://base.google.com/ns/1.0">
     <channel>
-        <title><?php echo get_bloginfo(); ?></title>
+        <title><?php echo get_bloginfo('name'); ?></title>
         <link><?php echo get_site_url(); ?></link>
         <description>Tüm Ürünler</description>
 
@@ -42,7 +42,7 @@ $loop = new WP_Query($args);
                 }
                 ?>
                 <g:durum>yeni</g:durum>
-                <g:marka><?php echo get_bloginfo(); ?></g:marka>
+                <g:marka><?php echo get_bloginfo('name'); ?></g:marka>
             </item>
             <?php
         }
