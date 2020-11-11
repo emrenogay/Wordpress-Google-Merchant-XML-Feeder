@@ -12,13 +12,15 @@ if( !defined('ABSPATH') ) exit;
 
 
 
-if ( !is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+if(function_exists('is_plugin_active')){
+	if ( !is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 		add_action('admin_notices', function(){
         global $lang;
         echo '<div class="notice notice-warning is-dismissible"><p>Görünen o ki sitenizde WooCommerce kurulu değil. Etkin olmadığı sürece Google Merchant için XML dosyası üretmemiz mümkün değil...</p></div>';
     });
 	
 } 
+}
 
 function xml_feeder_css()
 {
